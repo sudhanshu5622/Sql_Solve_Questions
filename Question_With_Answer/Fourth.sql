@@ -17,3 +17,15 @@ VALUES
 
 SELECT * FROM Sales;
 -- write a query to find the totle sales ammount for each month of the year 2023.
+
+-- SELECT SUM(Ammount) AS totalSum2023
+-- FROM Sales
+-- WHERE YEAR(Sale_date) = 2023;
+
+SELECT 
+    MONTH(Sale_date) AS Sale_Month,
+    SUM(Ammount) AS Total_Sales
+FROM Sales
+WHERE YEAR(Sale_date) = 2023
+GROUP BY MONTH(Sale_date)
+ORDER BY MONTH(Sale_date);
