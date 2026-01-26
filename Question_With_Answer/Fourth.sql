@@ -23,9 +23,8 @@ SELECT * FROM Sales;
 -- WHERE YEAR(Sale_date) = 2023;
 
 SELECT 
-    MONTH(Sale_date) AS Sale_Month,
-    SUM(Ammount) AS Total_Sales
-FROM Sales
-WHERE YEAR(Sale_date) = 2023
-GROUP BY MONTH(Sale_date)
-ORDER BY MONTH(Sale_date);
+MONTH(Sale_date) AS Sale_Month
+    SUM(Ammount) AS Total_Sum
+    WHERE YEAR(Sale_date) = 2023
+    GROUP BY MONTH(Sale_date)
+    ORDER BY MONTH(Sale_date);
